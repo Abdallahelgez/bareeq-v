@@ -1,0 +1,141 @@
+{
+    "section_id": "uuid",
+    "template": "sections/categories-sec.jinja",
+    "icon": "fal fa-sparkles",
+    "name": {
+      "ar": "سيكشن التصنيفات",
+      "en": "categories section"
+    },
+    "settings": [
+        {
+            "id": "title_sec",
+            "type": "text",
+            "label": {
+            "ar": "العنوان",
+            "en": "text"
+            }
+        },
+        {
+            "id": "view_all_url",
+            "type": "url",
+            "label": {
+            "ar": "رابط عرض الكل",
+            "en": "show all link"
+            }
+        },
+        {
+            "id": "categories",
+            "type": "list",
+            "label": {
+            "ar": "التصنيف",
+            "en": "category"
+            },
+            "max_items": 30,
+            "settings": [
+                {
+                    "id": "category_image",
+                    "type": "image",
+                    "label": {
+                        "ar": "صورة التصنيف",
+                        "en": "Category image"
+                    },
+                    "info": {
+                        "ar": "ارفع صورة بحجم ٥٠٠ *٥٠٠ ",
+                        "en": "upload image with sizes 500px*500px "
+                    }
+                },
+                {
+                    "id": "category_title",
+                    "type": "text",
+                    "label": {
+                    "ar": "اسم التصنيف",
+                    "en": "category title"
+                    }
+                },
+                {
+                    "id": "category_url",
+                    "type": "url",
+                    "label": {
+                    "ar": "رابط التصنيف",
+                    "en": "category link"
+                    }
+                }
+            
+            ]
+        },
+        {
+            "id": "mode",
+            "type": "select",
+            "label": {
+                "ar": "العناصر على شكل",
+                "en": "items with mode"
+            },
+            "options": [
+            {
+                "value": "slider",
+                "label": {
+                "ar": "اسلايدر",
+                "en": "slider mode"
+                }
+            },
+            {
+                "value": "grid",
+                "label": {
+                "ar": "قائمة",
+                "en": "grid mode"
+                }
+            }
+            ],
+            "default": "slider"
+        },
+        {
+            "id": "space_top",
+            "type": "select",
+            "label": {
+                "ar": "مسافة اعلى العنصر",
+                "en": "magin top the section"
+            },
+            "options": [
+            {
+                "value": "true",
+                "label": {
+                "ar": "يوجد مسافة",
+                "en": "found section magin"
+                }
+            },
+            {
+                "value": "false",
+                "label": {
+                "ar": "لا يوجد مسافة",
+                "en": "no found section margin"
+                }
+            }
+            ],
+            "default": "true"
+        },
+        {
+            "id": "bg_color_1",
+            "type": "color",
+            "label": {
+              "ar": "اللون الاول لخلفية الكارد",
+              "en": " first color for background"
+            }
+        },
+        {
+            "id": "bg_color_2",
+            "type": "color",
+            "label": {
+              "ar": "اللون الثانى لخلفية الكارد",
+              "en": " second color for background"
+            }
+        },
+        {
+            "id": "text_color",
+            "type": "color",
+            "label": {
+              "ar": "لون النص",
+              "en": " text color"
+            }
+        }
+    ]
+  }

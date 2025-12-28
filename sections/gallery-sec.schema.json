@@ -1,0 +1,165 @@
+{
+    "section_id": "uuid",
+    "template": "sections/gallery-sec.jinja",
+    "icon": "fal fa-images",
+    "name": {
+        "ar": "سيكشن المعرض",
+        "en": "Gallery Section"
+    },
+    "settings": [
+        {
+            "id": "title_sec",
+            "type": "text",
+            "label": {
+                "ar": "عنوان السيكشن",
+                "en": "Section Title"
+            }
+        },
+        {
+            "id": "view_all_url",
+            "type": "url",
+            "label": {
+                "ar": "رابط عرض الكل",
+                "en": "View All Link"
+            }
+        },
+        {
+            "id": "items",
+            "type": "list",
+            "label": {
+                "ar": "عناصر المعرض",
+                "en": "Gallery Items"
+            },
+            "max_items": 20,
+            "settings": [
+                {
+                    "id": "image",
+                    "type": "image",
+                    "label": {
+                        "ar": "الصورة",
+                        "en": "Image"
+                    },
+                    "info": {
+                        "ar": "ارفع صورة بحجم مناسب للمعرض",
+                        "en": "Upload an image suitable for the gallery"
+                    }
+                },
+                {
+                    "id": "title",
+                    "type": "text",
+                    "label": {
+                        "ar": "العنوان",
+                        "en": "Title"
+                    }
+                },
+                {
+                    "id": "description",
+                    "type": "textarea",
+                    "label": {
+                        "ar": "الوصف",
+                        "en": "Description"
+                    }
+                },
+                {
+                    "id": "text_pos",
+                    "type": "select",
+                    "label": {
+                        "ar": "موضع النصوص",
+                        "en": "Text Position"
+                    },
+                    "options": [
+                        {
+                            "value": "top-left",
+                            "label": {
+                                "ar": "أعلى اليسار",
+                                "en": "Top Left"
+                            }
+                        },
+                        {
+                            "value": "top-center",
+                            "label": {
+                                "ar": "أعلى الوسط",
+                                "en": "Top Center"
+                            }
+                        },
+                        {
+                            "value": "top-right",
+                            "label": {
+                                "ar": "أعلى اليمين",
+                                "en": "Top Right"
+                            }
+                        },
+                        {
+                            "value": "middle-left",
+                            "label": {
+                                "ar": "وسط اليسار",
+                                "en": "Middle Left"
+                            }
+                        },
+                        {
+                            "value": "middle-center",
+                            "label": {
+                                "ar": "وسط الوسط",
+                                "en": "Middle Center"
+                            }
+                        },
+                        {
+                            "value": "middle-right",
+                            "label": {
+                                "ar": "وسط اليمين",
+                                "en": "Middle Right"
+                            }
+                        },
+                        {
+                            "value": "bottom-left",
+                            "label": {
+                                "ar": "أسفل اليسار",
+                                "en": "Bottom Left"
+                            }
+                        },
+                        {
+                            "value": "bottom-center",
+                            "label": {
+                                "ar": "أسفل الوسط",
+                                "en": "Bottom Center"
+                            }
+                        },
+                        {
+                            "value": "bottom-right",
+                            "label": {
+                                "ar": "أسفل اليمين",
+                                "en": "Bottom Right"
+                            }
+                        }
+                    ],
+                    "default": "bottom-center"
+                },
+                {
+                    "id": "text_color",
+                    "type": "color",
+                    "label": {
+                        "ar": "لون النص",
+                        "en": "Text Color"
+                    },
+                    "default": "#ffffff"
+                },
+                {
+                    "id": "btn_text",
+                    "type": "text",
+                    "label": {
+                        "ar": "نص الزر",
+                        "en": "Button Text"
+                    }
+                },
+                {
+                    "id": "btn_url",
+                    "type": "url",
+                    "label": {
+                        "ar": "رابط الزر",
+                        "en": "Button URL"
+                    }
+                }
+            ]
+        }
+    ]
+}

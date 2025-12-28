@@ -1,0 +1,46 @@
+{
+  "section_id": "uuid",
+  "template": "sections/features-section.jinja",
+  "icon": "fal fa-sparkles",
+  "name": {
+    "ar": "خصائص المتجر",
+    "en": "Features"
+  },
+  "settings": [
+    {
+      "id": "store_features",
+      "type": "list",
+      "label": {
+        "ar": "الصورة",
+        "en": "Picture"
+      },
+      "max_items": 3,
+      "info": {
+        "ar": "",
+        "en": "This is an info text sample here"
+      },
+      "settings": [
+        {
+          "id": "image",
+          "type": "image",
+          "label": {
+            "ar": "الصورة",
+            "en": "Image"
+          },
+          "info": {
+            "ar": "ارفع صورة بحجم ٢٠٠ *٢٠٠ ",
+            "en": "This is an info text sample here"
+          }
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "label": {
+            "ar": "العنوان",
+            "en": "text"
+          }
+        }
+      ]
+    }
+  ]
+}

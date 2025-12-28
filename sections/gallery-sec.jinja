@@ -1,0 +1,39 @@
+<section class="gallery-sec  ">
+    <div class="container-sec {% if  settings.title_sec %}section-div{% endif %}">
+        {% if  settings.title_sec %}
+            <div class="section-header">
+                {% if settings.title_sec %}
+                    <h2 class="section-title">{{ settings.title_sec }}</h2>
+                {% endif %}
+                {% if settings.view_all_url %}
+                    <a href="{{ settings.view_all_url }}" class="view-all">{{ _("show all") }}</a>
+                {% endif %}
+            </div>
+        {% endif %}
+        <div class="grid-gallery ">
+            {% for item in safeget(settings, "items", []) %}
+                
+                <a href="{{item.btn_url}}" class="item ">
+                    {% if item.image %}
+                            <img class="img "  src="{{item.image}}"/>
+                    {% endif %}
+                    {% if item.title or item.description  or item.btn_text %}
+                            <div class="text-parent {{item.text_pos}}" style="--color:{{item.text_color}}">
+                            {% if item.title %}
+                                <h3 class="gallery-title">{{ item.title }}</h3>
+                            {% endif %}
+                            {% if item.description %}
+                                <p class="description">{{item.description}}</p>
+                            {% endif %}
+                            </div>
+                    {% endif %}
+                    
+                </a>
+                
+            {% endfor %}
+        </div>
+        
+    </div>
+
+
+</section>

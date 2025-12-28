@@ -1,0 +1,262 @@
+/* Gallery Section Styles */
+.gallery-sec {
+    padding: 60px 0;
+}
+
+.gallery-sec .container-sec {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.gallery-sec .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-sec .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.gallery-sec .view-all {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.gallery-sec .view-all:hover {
+    background: #0056b3;
+}
+
+/* Grid Layout */
+.grid-gallery {
+    display: grid;
+    gap: var(--gap-size, 20px);
+    grid-template-columns: repeat(var(--columns, 3), 1fr);
+}
+
+/* Gallery Items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item .item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    height: var(--image-height, 300px);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.gallery-sec[data-hover-effect="zoom"] .gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.gallery-sec[data-hover-effect="overlay"] .gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.gallery-sec[data-hover-effect="overlay"] .gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-sec[data-hover-effect="blur"] .gallery-item:hover .gallery-img {
+    filter: blur(2px);
+}
+
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    z-index: 2;
+    padding: 20px;
+    color: var(--text-color, #ffffff);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Positions */
+.text-overlay.top-left {
+    top: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.text-overlay.top-center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.text-overlay.top-right {
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.text-overlay.middle-left {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.text-overlay.middle-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-overlay.middle-right {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+.text-overlay.bottom-left {
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.text-overlay.bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.text-overlay.bottom-right {
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.gallery-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.gallery-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.gallery-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.gallery-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Gap Sizes */
+.gallery-sec[data-gap="small"] {
+    --gap-size: 10px;
+}
+
+.gallery-sec[data-gap="medium"] {
+    --gap-size: 20px;
+}
+
+.gallery-sec[data-gap="large"] {
+    --gap-size: 30px;
+}
+
+/* Image Heights */
+.gallery-sec[data-image-height="square"] .gallery-img {
+    --image-height: 300px;
+}
+
+.gallery-sec[data-image-height="portrait"] .gallery-img {
+    --image-height: 400px;
+}
+
+.gallery-sec[data-image-height="landscape"] .gallery-img {
+    --image-height: 250px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .gallery-sec .section-title {
+        font-size: 2rem;
+    }
+
+    .text-overlay {
+        padding: 15px;
+    }
+
+    .gallery-title {
+        font-size: 1.2rem;
+    }
+
+    .gallery-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-gallery {
+        grid-template-columns: 1fr !important;
+    }
+
+    .gallery-sec {
+        padding: 40px 0;
+    }
+
+    .gallery-sec .section-title {
+        font-size: 1.8rem;
+    }
+}
