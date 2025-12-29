@@ -53,6 +53,7 @@
   grid-gap: 16px;
   gap: 16px;
   position: relative;
+  max-height: 600px;
   grid-template-columns: repeat(10, minmax(0px, 1fr));
   grid-template-rows: repeat(6, minmax(0px, 1fr));
 }
@@ -79,6 +80,7 @@
   border-radius: 12px;
   overflow: hidden;
   border-radius: 10px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33.17%, #000000 100%);
 }
 .gallery-sec .grid-gallery .item .img {
   width: 100%;
