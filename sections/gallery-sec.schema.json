@@ -30,18 +30,30 @@
                 "ar": "عناصر المعرض",
                 "en": "Gallery Items"
             },
-            "max_items": 20,
+            "max_items": 6,
             "settings": [
                 {
                     "id": "image",
                     "type": "image",
                     "label": {
-                        "ar": "الصورة",
-                        "en": "Image"
+                        "ar": "صورة الديسكتوب",
+                        "en": "Desktop Image"
                     },
                     "info": {
-                        "ar": "ارفع صورة بحجم مناسب للمعرض",
-                        "en": "Upload an image suitable for the gallery"
+                        "ar": "ارفع صورة مناسبة لعرض الديسكتوب",
+                        "en": "Upload an image suitable for desktop view"
+                    }
+                },
+                {
+                    "id": "image_mobile",
+                    "type": "image",
+                    "label": {
+                        "ar": "صورة الموبايل",
+                        "en": "Mobile Image"
+                    },
+                    "info": {
+                        "ar": "يفضل رفع صورة بأبعاد مناسبة للموبايل، وإذا تُركت فارغة سيتم استخدام صورة الديسكتوب",
+                        "en": "Upload an image optimized for mobile; if empty, the desktop image will be used"
                     }
                 },
                 {
