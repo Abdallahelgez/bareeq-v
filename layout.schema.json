@@ -346,101 +346,233 @@
           "expandable": true,
           "settings": [
             {
-              "id": "background",
-              "type": "color",
+              "id": "colors",
+              "icon": "font_awesome",
+              "type": "fieldset",
               "label": {
-                "ar": "لون خلفية الكارد",
-                "en": "background card color"
-              }
-            },
-            {
-              "id": "bedge_back",
-              "type": "color",
-              "label": {
-                "ar": "لون خلفية الملصق",
-                "en": "background bedge card color"
-              }
-            },
-            {
-              "id": "bedge_color",
-              "type": "color",
-              "label": {
-                "ar": "لون نص الملصق",
-                "en": "bedge card color"
-              }
-            },
-            {
-              "id": "discount_back",
-              "type": "color",
-              "label": {
-                "ar": "لون خلفية نسبة الخصم",
-                "en": "background discount card color"
-              }
-            },
-            {
-              "id": "discount_color",
-              "type": "color",
-              "label": {
-                "ar": "لون نص نسبة الخصم",
-                "en": "discount card color"
-              }
-            },
-            {
-              "id": "background",
-              "type": "color",
-              "label": {
-                "ar": "لون خلفية الكارد",
-                "en": "background card color"
-              }
-            },
-            {
-              "id": "category_color",
-              "type": "color",
-              "label": {
-                "ar": "لون نص التصنيف",
-                "en": "Text color category"
-              }
-            },
-            {
-              "id": "title_color",
-              "type": "color",
-              "label": {
-                "ar": "لون نص اسم المنتج",
-                "en": "Text color title product"
-              }
-            },
-            {
-              "id": "price_color",
-              "type": "color",
-              "label": {
-                "ar": "لون نص السعر الاساسي",
-                "en": "Text color price product"
-              }
-            },
-            {
-              "id": "price_discount_color",
-              "type": "color",
-              "label": {
-                "ar": "لون نص السعر قبل الخصم",
-                "en": "Text color discount price product"
-              }
-            },
-            {
-              "id": "background_addbtn",
-              "type": "color",
-              "label": {
-                "ar": "لون خلفية زرار الاضافه ",
-                "en": "background color add to card"
-              }
-            },
-            {
-              "id": "text_color_addbtn",
-              "type": "color",
-              "label": {
-                "ar": "لون نص زرار الاضافه ",
-                "en": "text color add to card"
-              }
+                "ar": "الالوان",
+                "en": "colors"
+              },
+              "expandable": true,
+              "settings": [
+                {
+                  "id": "lightmode",
+                  "icon": "font_awesome",
+                  "type": "fieldset",
+                  "label": {
+                    "ar": "الوان اللايت موود",
+                    "en": "light colors"
+                  },
+                  "expandable": true,
+                  "settings": [
+                    {
+                      "id": "background",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون خلفية الكارد",
+                        "en": "background card color"
+                      }
+                    },
+                    {
+                      "id": "bedge_back",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون خلفية الملصق",
+                        "en": "background bedge card color"
+                      }
+                    },
+                    {
+                      "id": "bedge_color",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون نص الملصق",
+                        "en": "bedge card color"
+                      }
+                    },
+                    {
+                      "id": "discount_back",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون خلفية نسبة الخصم",
+                        "en": "background discount card color"
+                      }
+                    },
+                    {
+                      "id": "discount_color",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون نص نسبة الخصم",
+                        "en": "discount card color"
+                      }
+                    },
+                    {
+                      "id": "background",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون خلفية الكارد",
+                        "en": "background card color"
+                      }
+                    },
+                    {
+                      "id": "category_color",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون نص التصنيف",
+                        "en": "Text color category"
+                      }
+                    },
+                    {
+                      "id": "title_color",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون نص اسم المنتج",
+                        "en": "Text color title product"
+                      }
+                    },
+                    {
+                      "id": "price_color",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون نص السعر الاساسي",
+                        "en": "Text color price product"
+                      }
+                    },
+                    {
+                      "id": "price_discount_color",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون نص السعر قبل الخصم",
+                        "en": "Text color discount price product"
+                      }
+                    },
+                    {
+                      "id": "background_addbtn",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون خلفية زرار الاضافه ",
+                        "en": "background color add to card"
+                      }
+                    },
+                    {
+                      "id": "text_color_addbtn",
+                      "type": "color",
+                      "label": {
+                        "ar": "لون نص زرار الاضافه ",
+                        "en": "text color add to card"
+                      }
+                    }
+                  ]},
+                  {
+                    "id": "darkmode",
+                    "icon": "font_awesome",
+                    "type": "fieldset",
+                    "label": {
+                      "ar": "الوان الدارك موود",
+                      "en": "dark colors"
+                    },
+                    "expandable": true,
+                    "settings": [
+                      {
+                        "id": "background_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون خلفية الكارد",
+                          "en": "background card color"
+                        }
+                      },
+                      {
+                        "id": "bedge_back_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون خلفية الملصق",
+                          "en": "background bedge card color"
+                        }
+                      },
+                      {
+                        "id": "bedge_color_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون نص الملصق",
+                          "en": "bedge card color"
+                        }
+                      },
+                      {
+                        "id": "discount_back_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون خلفية نسبة الخصم",
+                          "en": "background discount card color"
+                        }
+                      },
+                      {
+                        "id": "discount_color_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون نص نسبة الخصم",
+                          "en": "discount card color"
+                        }
+                      },
+                      {
+                        "id": "background_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون خلفية الكارد",
+                          "en": "background card color"
+                        }
+                      },
+                      {
+                        "id": "category_color_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون نص التصنيف",
+                          "en": "Text color category"
+                        }
+                      },
+                      {
+                        "id": "title_color_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون نص اسم المنتج",
+                          "en": "Text color title product"
+                        }
+                      },
+                      {
+                        "id": "price_color_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون نص السعر الاساسي",
+                          "en": "Text color price product"
+                        }
+                      },
+                      {
+                        "id": "price_discount_color_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون نص السعر قبل الخصم",
+                          "en": "Text color discount price product"
+                        }
+                      },
+                      {
+                        "id": "background_addbtn_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون خلفية زرار الاضافه ",
+                          "en": "background color add to card"
+                        }
+                      },
+                      {
+                        "id": "text_color_addbtn_dark",
+                        "type": "color",
+                        "label": {
+                          "ar": "لون نص زرار الاضافه ",
+                          "en": "text color add to card"
+                        }
+                      }
+                    ]}
+                
+              ]
             }
+            
           ]
         }
       ]

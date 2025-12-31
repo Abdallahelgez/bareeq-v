@@ -297,6 +297,9 @@
     }
     .card-content{
         padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
         .card-content-inner{
             display: flex;
             flex-direction: column;

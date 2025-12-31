@@ -267,6 +267,9 @@
 }
 .custom-card-1.product-item .card-content {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .custom-card-1.product-item .card-content .card-content-inner {
   display: flex;
