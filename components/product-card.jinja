@@ -82,7 +82,8 @@
                 </a>
                 {% elif ( product.has_options or product.has_fields or product.product_class == 'dynamic_bundle' ) %}
                 <a class="btn btn-primary btn-product-card-select-variant" href="/products/{{ product.slug }}">
-                {{ _("add to cart") }}</a>
+                {{ _("add
+                 to cart") }}</a>
                 {% else %}
                 <a class="btn btn-primary product-card-add-to-cart"
                     onclick="event.preventDefault(); event.stopPropagation(); productCartAddToCart(this,'{{ product.id }}')">

@@ -118,7 +118,13 @@ function checkMultiLineTranslations(filePath) {
  * Main test function
  */
 function runTests() {
-  console.log('🔍 Checking for multi-line translation strings...\n');
+  const isPrePush = process.argv.includes('prepush');
+  
+  if (isPrePush) {
+    console.log('Running translation strings test (pre-push hook)...\n');
+  } else {
+    console.log('🔍 Checking for multi-line translation strings...\n');
+  }
   
   const jinjaFiles = findJinjaFiles();
   let totalErrors = 0;
