@@ -11,7 +11,7 @@
         {% include 'vitrin:products/badge.jinja' %}
         {% endif %}
         {% if product.discount_percentage %}
-            <span class="discound-tag" itemprop="discount_percentage">
+            <span class="discound-tag" >
                 &nbsp; &nbsp;{{ _("Discount") }}&nbsp;{{ product.discount_percentage }}%
             </span>
         {% endif %}
@@ -60,17 +60,17 @@
             </div>
             
             
-                <div class="product-title"><span itemprop="name">{{ product.name | safe }}</span></div>
+                <div class="custom-product-title"><span itemprop="name">{{ product.name | safe }}</span></div>
                 
-            <
+            
             {% if product.formatted_sale_price is not none %}
-            <div class="section-product-price">
-                <div class="product-price "><span>{{ product.formatted_sale_price }}</span></div>
-                <div class="product-prev-price">{{ product.formatted_price }}</div>
+            <div class="product-price-sec">
+                <div class="price"><span>{{ product.formatted_sale_price }}</span></div>
+                <div class="prev-price"><span>{{ product.formatted_price }}</span></div>
             </div>
             {% else %}
-            <div class="section-product-price">
-                <div class="product-price"><span>{{ product.formatted_price }}</span></div>
+            <div class="product-price-sec">
+                <div class="price"><span>{{ product.formatted_price }}</span></div>
             </div>
             {% endif %}
         </div>

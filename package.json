@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prebuild": "node test-translation-strings.js",
+    "build": "vitrin build",
     "test": "node test-translation-strings.js",
     "test:translations": "node test-translation-strings.js"
   },

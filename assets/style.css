@@ -229,6 +229,8 @@
   position: absolute;
   top: 10px;
   left: 10px;
+  background-color: var(--card-discount-bacground-color);
+  color: var(--card-discount-text-color);
 }
 .custom-card-1.product-item .parent-img .product-card-bundle-offer {
   position: absolute;
@@ -269,7 +271,7 @@
   text-transform: capitalize;
   color: var(--card-category-color);
 }
-.custom-card-1.product-item .card-content .card-content-inner .product-title span {
+.custom-card-1.product-item .card-content .card-content-inner .custom-product-title span {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.4;
@@ -277,7 +279,13 @@
   text-transform: capitalize;
   color: var(--card-title-color);
 }
-.custom-card-1.product-item .card-content .card-content-inner .section-product-price .product-price span {
+.custom-card-1.product-item .card-content .card-content-inner .product-price-sec {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.custom-card-1.product-item .card-content .card-content-inner .product-price-sec .price span {
   font-weight: 700;
   font-size: 20px;
   line-height: 1;
@@ -285,7 +293,7 @@
   display: flex;
   color: var(--card-price-color);
 }
-.custom-card-1.product-item .card-content .card-content-inner .section-product-price .product-prev-price span {
+.custom-card-1.product-item .card-content .card-content-inner .product-price-sec .prev-price span {
   font-weight: 400;
   font-size: 14px;
   line-height: 1;
@@ -293,4 +301,12 @@
   text-decoration: line-through;
   display: flex;
   color: var(--card-discount-price-color);
+}
+.custom-card-1.product-item .card-content .btns-card .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card-addcartbtn-background-color);
+  color: var(--card-addcartbtn-color);
 }

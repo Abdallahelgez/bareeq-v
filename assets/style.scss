@@ -238,6 +238,8 @@
                 position: absolute;
                 top: 10px;
                 left: 10px;
+                background-color: var(--card-discount-bacground-color);
+                color: var(--card-discount-text-color);
 
             }
         }
@@ -307,7 +309,7 @@
                     }
                 }
             }
-            .product-title{
+            .custom-product-title{
                 span{
                     font-weight: 600;
                     font-size: 20px;
@@ -317,8 +319,12 @@
                     color: var(--card-title-color);
                 }
             }
-            .section-product-price{
-                .product-price{
+            .product-price-sec{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+                .price{
                     span{
                         font-weight: 700;
                         font-size: 20px;
@@ -328,7 +334,7 @@
                         color: var(--card-price-color);
                     }
                 }
-                .product-prev-price{
+                .prev-price{
                     span{
                         font-weight: 400;
                         font-size: 14px;
@@ -342,7 +348,14 @@
             }
         }
         .btns-card{
-            
+            .btn{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--card-addcartbtn-background-color);
+                color: var(--card-addcartbtn-color);
+            }
         }
     }
 }
