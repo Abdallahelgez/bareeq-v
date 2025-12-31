@@ -161,7 +161,18 @@
     font-family: {% if settings.fonts_name %}{{ settings.fonts_name | replace('+', ' ') }}{% else %}'Changa'{% endif %}, sans-serif;
   }
   :root {
-  {% if settings is defined %}
+
+
+
+
+
+
+
+
+
+
+
+    {% if settings is defined %}
         {% if settings.colors_header_background_color %}
         --header-primary-color: {{ settings.colors_header_background_color }};
         {% endif %}
@@ -183,7 +194,222 @@
         {% if settings.colors_header_text_color %}--header-text-color-primary-bg: {{settings.colors_header_text_color}};{% endif %}
         {% if settings.colors_footer_background_color %}--footer-primary-color: {{settings.colors_footer_background_color}};{% endif %}
         {% if settings.colors_footer_text_color %}--footer-text-color-primary-bg: {{settings.colors_footer_text_color}};{% endif %}
+
+        /* product card variables */
+        {% if settings.general_productcard_background %}
+            --card-background-color: {{ settings.general_productcard_background }};
+        {% else %}
+            --card-background-color: #ffffff;
+        {% endif %}
+        
+        {% if settings.general_productcard_bedge_back %}
+            --card-bedge-bacground-color: {{ settings.general_productcard_bedge_back }};
+        {% else %}
+            --card-bedge-bacground-color: #A89080;
+        {% endif %}
+        
+        {% if settings.general_productcard_bedge_color %}
+            --card-bedge-text-color: {{ settings.general_productcard_bedge_color }};
+        {% else %}
+            --card-bedge-text-color: #A89080;
+        {% endif %}
+
+        {% if settings.general_productcard_discount_back %}
+            --card-discount-bacground-color: {{ settings.general_productcard_discount_back }};
+        {% else %}
+            --card-discount-bacground-color: #EED5D0;
+        {% endif %}
+        
+        {% if settings.general_productcard_discount_color %}
+            --card-discount-text-color: {{ settings.general_productcard_discount_color }};
+        {% else %}
+            --card-discount-text-color: #1A1816;
+        {% endif %}
+
+        {% if settings.general_productcard_category_color %}
+            --card-category-color: {{ settings.general_productcard_category_color }};
+        {% else %}
+            --card-category-color: #A89080;
+        {% endif %}
+
+        {% if settings.general_productcard_title_color %}
+            --card-title-color: {{ settings.general_productcard_title_color }};
+        {% else %}
+            --card-title-color: #2D2424;
+        {% endif %}
+
+        {% if settings.general_productcard_price_color %}
+            --card-price-color: {{ settings.general_productcard_price_color }};
+        {% else %}
+            --card-price-color: #1A0F04;
+        {% endif %}
+
+        {% if settings.general_productcard_price_discount_color %}
+            --card-discount-price-color: {{ settings.general_productcard_price_discount_color }};
+        {% else %}
+            --card-discount-price-color: #A89080;
+        {% endif %}
+
+        {% if settings.general_productcard_background_addbtn %}
+            --card-addcartbtn-background-color: {{ settings.general_productcard_background_addbtn }};
+        {% else %}
+            --card-addcartbtn-background-color: #A05646;
+        {% endif %}
+
+        {% if settings.general_productcard_color_addbtn %}
+            --card-addcartbtn-color: {{ settings.general_productcard_color_addbtn }};
+        {% else %}
+            --card-addcartbtn-color: #ffffff;
+        {% endif %}
       }
+
+      /* ============================================
+         Dark Mode - دعم الدارك مود بطريقتين
+         ============================================ */
+      
+      /* الطريقة 1: [data-theme="dark"] - تحكم يدوي (أولوية عالية) */
+      /* استخدام: document.body.setAttribute('data-theme', 'dark') */
+      [data-theme="dark"] {
+        {% if settings.general_productcard_background_dark %}
+          --card-background-color: {{ settings.general_productcard_background_dark }};
+        {% else %}
+          --card-background-color: #1a1a1a;
+        {% endif %}
+        
+        {% if settings.general_productcard_bedge_back_dark %}
+          --card-bedge-bacground-color: {{ settings.general_productcard_bedge_back_dark }};
+        {% else %}
+          --card-bedge-bacground-color: #6B5B4F;
+        {% endif %}
+        
+        {% if settings.general_productcard_bedge_color_dark %}
+          --card-bedge-text-color: {{ settings.general_productcard_bedge_color_dark }};
+        {% else %}
+          --card-bedge-text-color: #D4C4B8;
+        {% endif %}
+
+        {% if settings.general_productcard_discount_back_dark %}
+          --card-discount-bacground-color: {{ settings.general_productcard_discount_back_dark }};
+        {% else %}
+          --card-discount-bacground-color: #8B6F6B;
+        {% endif %}
+        
+        {% if settings.general_productcard_discount_color_dark %}
+          --card-discount-text-color: {{ settings.general_productcard_discount_color_dark }};
+        {% else %}
+          --card-discount-text-color: #F5E6E3;
+        {% endif %}
+
+        {% if settings.general_productcard_category_color_dark %}
+          --card-category-color: {{ settings.general_productcard_category_color_dark }};
+        {% else %}
+          --card-category-color: #B8A89A;
+        {% endif %}
+
+        {% if settings.general_productcard_title_color_dark %}
+          --card-title-color: {{ settings.general_productcard_title_color_dark }};
+        {% else %}
+          --card-title-color: #E8E8E8;
+        {% endif %}
+
+        {% if settings.general_productcard_price_color_dark %}
+          --card-price-color: {{ settings.general_productcard_price_color_dark }};
+        {% else %}
+          --card-price-color: #F5F5F5;
+        {% endif %}
+
+        {% if settings.general_productcard_price_discount_color_dark %}
+          --card-discount-price-color: {{ settings.general_productcard_price_discount_color_dark }};
+        {% else %}
+          --card-discount-price-color: #B8A89A;
+        {% endif %}
+
+        {% if settings.general_productcard_background_addbtn_dark %}
+          --card-addcartbtn-background-color: {{ settings.general_productcard_background_addbtn_dark }};
+        {% else %}
+          --card-addcartbtn-background-color: #C67A6A;
+        {% endif %}
+
+        {% if settings.general_productcard_color_addbtn_dark %}
+          --card-addcartbtn-color: {{ settings.general_productcard_color_addbtn_dark }};
+        {% else %}
+          --card-addcartbtn-color: #ffffff;
+        {% endif %}
+      }
+
+      /* الطريقة 2: @media (prefers-color-scheme: dark) - تلقائي حسب إعدادات النظام */
+      /* يعمل تلقائياً إذا كان النظام على دارك مود (أولوية أقل من [data-theme]) */
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme]) {
+          {% if settings.general_productcard_background_dark %}
+            --card-background-color: {{ settings.general_productcard_background_dark }};
+          {% else %}
+            --card-background-color: #1a1a1a;
+          {% endif %}
+          
+          {% if settings.general_productcard_bedge_back_dark %}
+            --card-bedge-bacground-color: {{ settings.general_productcard_bedge_back_dark }};
+          {% else %}
+            --card-bedge-bacground-color: #6B5B4F;
+          {% endif %}
+          
+          {% if settings.general_productcard_bedge_color_dark %}
+            --card-bedge-text-color: {{ settings.general_productcard_bedge_color_dark }};
+          {% else %}
+            --card-bedge-text-color: #D4C4B8;
+          {% endif %}
+
+          {% if settings.general_productcard_discount_back_dark %}
+            --card-discount-bacground-color: {{ settings.general_productcard_discount_back_dark }};
+          {% else %}
+            --card-discount-bacground-color: #8B6F6B;
+          {% endif %}
+          
+          {% if settings.general_productcard_discount_color_dark %}
+            --card-discount-text-color: {{ settings.general_productcard_discount_color_dark }};
+          {% else %}
+            --card-discount-text-color: #F5E6E3;
+          {% endif %}
+
+          {% if settings.general_productcard_category_color_dark %}
+            --card-category-color: {{ settings.general_productcard_category_color_dark }};
+          {% else %}
+            --card-category-color: #B8A89A;
+          {% endif %}
+
+          {% if settings.general_productcard_title_color_dark %}
+            --card-title-color: {{ settings.general_productcard_title_color_dark }};
+          {% else %}
+            --card-title-color: #E8E8E8;
+          {% endif %}
+
+          {% if settings.general_productcard_price_color_dark %}
+            --card-price-color: {{ settings.general_productcard_price_color_dark }};
+          {% else %}
+            --card-price-color: #F5F5F5;
+          {% endif %}
+
+          {% if settings.general_productcard_price_discount_color_dark %}
+            --card-discount-price-color: {{ settings.general_productcard_price_discount_color_dark }};
+          {% else %}
+            --card-discount-price-color: #B8A89A;
+          {% endif %}
+
+          {% if settings.general_productcard_background_addbtn_dark %}
+            --card-addcartbtn-background-color: {{ settings.general_productcard_background_addbtn_dark }};
+          {% else %}
+            --card-addcartbtn-background-color: #C67A6A;
+          {% endif %}
+
+          {% if settings.general_productcard_color_addbtn_dark %}
+            --card-addcartbtn-color: {{ settings.general_productcard_color_addbtn_dark }};
+          {% else %}
+            --card-addcartbtn-color: #ffffff;
+          {% endif %}
+        }
+      }
+
+
   {% endif %}
 </style>
 

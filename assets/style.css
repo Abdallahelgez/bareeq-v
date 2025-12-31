@@ -212,3 +212,25 @@
   grid-column: 9/11;
   grid-row: 1/7;
 }
+
+.custom-card-1.product-item .parent-img {
+  height: 300px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.custom-card-1.product-item .parent-img img {
+  width: 100%;
+  object-fit: contain;
+}
+.custom-card-1.product-item .parent-img.has-discount .discound-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.custom-card-1.product-item .parent-img .product-card-bundle-offer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}

@@ -216,19 +216,35 @@
     } 
 }
 .custom-card-1.product-item{
+    
+
     .parent-img{
+        height: 300px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
         img{
+            width: 100%;
+            object-fit: contain;
 
         }
         &.has-discount{
             .discound-tag{
+                position: absolute;
+                top: 10px;
+                left: 10px;
 
             }
         }
-        &.has-offer{
+        
             .product-card-bundle-offer{
-
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
             }
+        .badge-name{
+                
         }
         .wish_quick-view{
             .add-to-wishlist{
