@@ -1,22 +1,9 @@
 {% if product %}
 
-<div product-id="{{product.id}}" itemscope itemtype="https://schema.org/Product" class="product-item position-relative custom-card-1 {% if product.is_infinite == false and product.quantity <= 0 %}product-item-out-of-stock{% endif %}"
->
-    {# {% if store.settings.products.wishlist_enabled == true %}
-    <span class="add-to-wishlist" data-wishlist-id="{{ product.id }}">
-        <span zid-visible-customer="true">
-            <button zid-visible-wishlist="{{ product.id }}" class="icon-heart-mask filled"
-                onclick="addToWishlist(this, '{{ product.id }}')"></button>
-            <button zid-hidden-wishlist="{{ product.id }}" class="icon-heart-mask"
-                onclick="addToWishlist(this, '{{ product.id }}')"></button>
-        </span>
-        <a zid-visible-guest="true" class="icon-heart-mask" href="/auth/login?redirect_to={{ session.url.path }}"
-            onclick="event.preventDefault(); handleLoginAction('', false); return false;"></a>
-        <img class="loader d-none" src="{{ 'spinner.gif' | asset_url }}" width="20" height="20" />
-    </span>
-    {% endif %} #}
+<div product-id="{{product.id}}" itemscope itemtype="https://schema.org/Product" class="product-item position-relative custom-card-1 {% if product.is_infinite == false and product.quantity <= 0 %}product-item-out-of-stock{% endif %}">
+    
 
-    <a href="/products/{{ product.slug }}" class="parent-img {% if product.discount_percentage %}has-discount{% endif %}">
+    <div  class="parent-img {% if product.discount_percentage %}has-discount{% endif %}">
 
 
         {% if product.badge %}
@@ -29,11 +16,13 @@
             </span>
         {% endif %}
 
-
-        <img id="product-card-img-{{ product.id }}" width="288" height="300" {% if product.images or product.videos %}
+        <a href="/products/{{ product.slug }}">
+                <img id="product-card-img-{{ product.id }}" width="288" height="300" {% if product.images or product.videos %}
             src="{{ product.main_image.image.small if product.main_image else '' }}" {% else %}
             src="{{ image_url(('product-img.svg' | asset_url), w=235, q=100, f='auto') }}" {% endif %}
             alt="{{ product.name }}">
+        </a>
+        
         <span class="product-card-bundle-offer" data-bundle-offer-product-id="{{ product.id }}"></span>
         <div class="wish_quick-view">
             <span class="add-to-wishlist" data-wishlist-id="{{ product.id }}">
@@ -52,31 +41,37 @@
             <span class="quick-view-icon"><i class="bi bi-eye"></i></span>
         </div>
 
-    </a>
+    </div>
     <div class="card-content">
         <div class="card-content-inner">
-            <div class="category-name">
-                <span>{{product.categories[0].name}}</span>
-            </div>
-            <div class="title-rate">
-                <div class="product-title" style="margin-top: 15px"><span>{{ product.name | safe }}</span></div>
-                {% if store.settings.products.reviews_enabled %}
-                <div class="product-card-rating-wrapper" style="height: 18px">
-                    {% if product.rating %}
-                    {% set rating=product.rating.average %}{% include 'components/rating-stars.jinja' %}
-                    {% if product.rating.total_count > 0 %}<span class="product-card-rating-count">({{
-                        product.rating.total_count }})</span>{% endif %}
-                    {% endif %}
+            <div class="category-rate">
+                <div class="category-name">
+                    <span>{{product.categories[0].name}}</span>
                 </div>
+                {% if store.settings.products.reviews_enabled %}
+                    <div class="product-card-rating-wrapper" >
+                        {% if product.rating %}
+                        {% set rating=product.rating.average %}{% include 'components/rating-stars.jinja' %}
+                        {% if product.rating.total_count > 0 %}<span class="product-card-rating-count">({{
+                            product.rating.total_count }})</span>{% endif %}
+                        {% endif %}
+                    </div>
                 {% endif %}
             </div>
+            
+            
+                <div class="product-title"><span itemprop="name">{{ product.name | safe }}</span></div>
+                
+            <
             {% if product.formatted_sale_price is not none %}
             <div class="section-product-price">
                 <div class="product-price "><span>{{ product.formatted_sale_price }}</span></div>
                 <div class="product-prev-price">{{ product.formatted_price }}</div>
             </div>
             {% else %}
-            <div class="product-price"><span>{{ product.formatted_price }}</span></div>
+            <div class="section-product-price">
+                <div class="product-price"><span>{{ product.formatted_price }}</span></div>
+            </div>
             {% endif %}
         </div>
         <div class="btns-card" style="text-align: center">
@@ -86,8 +81,8 @@
                 <span>{{ _("Notify me when available") }}</span>
                 </a>
                 {% elif ( product.has_options or product.has_fields or product.product_class == 'dynamic_bundle' ) %}
-                <a class="btn btn-primary btn-product-card-select-variant" href="/products/{{ product.slug }}">{{ _("add
-                    to cart") }}</a>
+                <a class="btn btn-primary btn-product-card-select-variant" href="/products/{{ product.slug }}">
+                {{ _("add to cart") }}</a>
                 {% else %}
                 <a class="btn btn-primary product-card-add-to-cart"
                     onclick="event.preventDefault(); event.stopPropagation(); productCartAddToCart(this,'{{ product.id }}')">

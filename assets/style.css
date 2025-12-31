@@ -219,8 +219,9 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
-.custom-card-1.product-item .parent-img img {
+.custom-card-1.product-item .parent-img a:has(img) img {
   width: 100%;
   object-fit: contain;
 }
@@ -233,4 +234,63 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+}
+.custom-card-1.product-item .parent-img .wish_quick-view {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+.custom-card-1.product-item:hover .parent-img .wish_quick-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+.custom-card-1.product-item .card-content .card-content-inner .category-rate {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-card-1.product-item .card-content .card-content-inner .category-rate .category-name {
+  display: flex;
+}
+.custom-card-1.product-item .card-content .card-content-inner .category-rate .category-name span {
+  font-weight: 400;
+  display: flex;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: right;
+  text-transform: capitalize;
+  color: var(--card-category-color);
+}
+.custom-card-1.product-item .card-content .card-content-inner .product-title span {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  text-transform: capitalize;
+  color: var(--card-title-color);
+}
+.custom-card-1.product-item .card-content .card-content-inner .section-product-price .product-price span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0%;
+  display: flex;
+  color: var(--card-price-color);
+}
+.custom-card-1.product-item .card-content .card-content-inner .section-product-price .product-prev-price span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0%;
+  text-decoration: line-through;
+  display: flex;
+  color: var(--card-discount-price-color);
 }
